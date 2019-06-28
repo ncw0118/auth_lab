@@ -1,0 +1,1 @@
+IP Addresses are hard coded for TCP connections and must be altered in index.py, and server.py

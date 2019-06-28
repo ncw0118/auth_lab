@@ -1,0 +1,19 @@
+1.	Open CentOS VM
+2.	Login as root
+3.	Open terminal
+4.	Åeyum install wget git httpd php php-cgi php-pdo php-pdo_mysqlÅf
+5.	Åewget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmÅf
+6.	Åerpm -ivh mysql-community-release-el7-5.noarch.rpmÅf
+7.	Åeyum install mysql mysql-serverÅf
+8.	'systemctl start mysqldÅf
+9.	In MySQL ÅgGRANT ALL PRIVILEGES ON *.* TO 'oauth'@'localhost' IDENTIFIED BY 'pass';Åh and Ågcreate database oauth;Åh
+
+10.	 https://bshaffer.github.io/oauth2-server-php-docs/cookbook/
+	10.1. File location for oauth git dump is in /var/www/html
+	10.2. File locations for server.php and token.php are in /var/www/html
+	10.3. Edit server.php to use credentials in [9]
+	10.4. Edit server.php and token.php - add <?php Åc ?> at start and end respectively
+	10.5. To perform test, Åesystemctl start httpdÅf
+	10.6. (Optional) Åevi /etc/php.iniÅf Åe/DateÅf Åedate.timezone = America/New_YorkÅf
+
+11.	Åesystemctl stop firewalldÅf

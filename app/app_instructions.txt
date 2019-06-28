@@ -1,0 +1,8 @@
+1.	Start CentOS VM
+2.	Login as root
+3.	Open terminal
+4.	Åeyum install python pycryptoÅf
+5.	systemctl stop firewalld	[ necessary for client to receive responses ]
+
+6.	vi ~/app.py			in folder
+7.	python ~/server.py

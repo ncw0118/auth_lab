@@ -1,0 +1,20 @@
+1.	Start CentOS VM
+2.	Login as root
+3.	Open terminal
+4.	Åeyum install httpd python pycryptoÅf
+
+5.	vi /etc/httpd/conf.d/cgi-enabled.conf		in folder
+6.	vi /var/www/html/index.html			in folder
+7.	chmod 755 /var/www/html/index.html
+
+8.	mkdir /var/www/html/cgi-enabled
+9.	vi /var/www/html/cgi-enabled/client.py		in folder
+10.	chmod 755 /var/www/html/cgi-enabled/client.py
+
+11.	firewall-cmd --permanent --add-port=80/tcp
+12.	firewall-cmd --permanent --add-port=443/tcp
+13.	systemctl start httpd
+
+14.	Open firefox
+15.	Go to localhost/	[may need Åesetenforce 0Åf]
+
